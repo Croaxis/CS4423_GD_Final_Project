@@ -15,9 +15,12 @@ public class CameraMovementScript : MonoBehaviour
     Vector2 p1;
     Vector2 p2;
 
-    // Update is called once per frame
-    void Update()
-    {
+    void Update(){
+        if (Time.timeScale == 0f)
+        {
+            return;
+        }
+
         float scaledSpeed = speed * Camera.main.orthographicSize;
         float scaledRotateSpeed = rotateSpeed * Camera.main.orthographicSize;
 
