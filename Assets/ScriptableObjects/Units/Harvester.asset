@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24cdc792219ae70438d0317e5f8c9694, type: 3}
+  m_Name: Harvester
+  m_EditorClassIdentifier: 
+  type: 0
+  unitName: harvester
+  unitPrefab: {fileID: 7886124053514883653, guid: 5ea14b01ab038174f89c303cb52feab2, type: 3}
+  icon: {fileID: 1992520639534613850, guid: 59fe8e0b93031d6438607ef1c64213d0, type: 3}
+  spawnTime: 5
+  baseStats:
+    unitCost: 75
+    unitHP: 50
+    unitArmor: 0
+    unitAttack: 0
+    unitAttackRange: 0
+    unitAttackSpeed: 0
+    unitAggroRange: 0

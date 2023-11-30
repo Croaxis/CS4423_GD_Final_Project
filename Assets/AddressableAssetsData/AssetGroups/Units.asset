@@ -16,12 +16,7 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 71ec1721b45d2d945863d9b8e875db50
-  m_SerializeEntries:
-  - m_GUID: 5512cfac6c0d0e743b2b5be1576f94c5
-    m_Address: Assets/Sprites/Harvester.png
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 0cea82300dfb32743bdec6e3a161e858, type: 2}
   m_SchemaSet:

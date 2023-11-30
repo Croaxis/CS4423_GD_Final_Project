@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0baf33b1eb1edb4e836c6c3a8cc5d29, type: 3}
+  m_Name: Starport
+  m_EditorClassIdentifier: 
+  type: 0
+  structureName: 
+  structurePrefab: {fileID: 8083577665416769604, guid: b6d6e230021f4d3439e9a30725aa5020, type: 3}
+  icon: {fileID: 1992520639534613850, guid: 59fe8e0b93031d6438607ef1c64213d0, type: 3}
+  baseStats:
+    structureCost: 500
+    structureHP: 500
+    structureArmor: 25
+    structureAttack: 0
+    structureAttackRange: 0
+    structureAttackSpeed: 0
+    structureAggroRange: 0
