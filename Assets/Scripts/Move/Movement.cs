@@ -27,5 +27,9 @@ namespace cs4423fp.Move
                 gameObject.transform.rotation = Quaternion.Euler(0f, 0f, angleDegrees - 90);
             }
         }
+
+        public static bool IsMoving(NavMeshAgent agent){
+            return agent != null && agent.velocity.magnitude > 0.1f;
+        }
     }
 }

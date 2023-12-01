@@ -8,7 +8,8 @@ namespace cs4423fp.Structures
     public class StandardStructure : ScriptableObject
     {
         public enum structureType{
-            Starport
+            Starport,
+            Astroid
         }
 
         [Space(15)]

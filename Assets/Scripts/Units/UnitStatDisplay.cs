@@ -40,7 +40,15 @@ namespace cs4423fp.Units
         }
 
         public void TakeDamage(float damage){
-            float totalDamage = damage - armor;
+            float totalDamage;
+
+            if(armor != 0f){
+                totalDamage = damage / armor;
+            }
+            else{
+                totalDamage = damage;
+            }
+            
             currentHealth -= totalDamage;
 
         }

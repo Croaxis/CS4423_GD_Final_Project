@@ -8,7 +8,7 @@ namespace cs4423fp.Structures
     {
         public static StructureHandler Instance;
         
-        [SerializeField] private StandardStructure starport;
+        [SerializeField] private StandardStructure starport, astroid;
 
         public LayerMask pUnitLayer, eUnitLayer;
 
@@ -25,6 +25,9 @@ namespace cs4423fp.Structures
             switch(type){
                 case "starport":
                     structure = starport;
+                    break;
+                case "astroid":
+                    structure = astroid;
                     break;
                 default:
                     Debug.Log($"Structure Type: {type} couldn't be found or does not exist!");

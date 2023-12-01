@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0baf33b1eb1edb4e836c6c3a8cc5d29, type: 3}
-  m_Name: Starport
+  m_Name: Astroid
   m_EditorClassIdentifier: 
-  type: 0
-  structureName: starport
-  structurePrefab: {fileID: 8083577665416769604, guid: 40cf1f4331710fe4cb69baa87137cc31, type: 3}
-  icon: {fileID: 1992520639534613850, guid: 59fe8e0b93031d6438607ef1c64213d0, type: 3}
-  spawnTime: 0
+  type: 1
+  structureName: Asteriod
+  structurePrefab: {fileID: 4263732888614473087, guid: faca5d88f93f7e447a7fb813fec7a882, type: 3}
+  icon: {fileID: 4263732888614473087, guid: faca5d88f93f7e447a7fb813fec7a882, type: 3}
+  spawnTime: 5
   baseStats:
-    structureCost: 500
-    structureHP: 500
-    structureArmor: 25
+    structureCost: 0
+    structureHP: 100
+    structureArmor: 5
     structureAttack: 0
     structureAttackRange: 0
     structureAttackSpeed: 0

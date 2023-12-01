@@ -2,20 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace cs4423fp.Structures.Player
+namespace cs4423fp.Environment.Terrian
 {
-    public class PlayerStructure : MonoBehaviour
+    public class Astroid : MonoBehaviour
     {
-        public StandardStructure structureType;
+        public Structures.StandardStructure structureType;
         [HideInInspector]
-        public StructureStatTypes.Base baseStats;
-
+        public Structures.StructureStatTypes.Base baseStats;
         public Units.UnitStatDisplay statDisplay;
-
+        
         private void Start(){
             baseStats = structureType.baseStats;
             statDisplay = GetComponentInChildren<Units.UnitStatDisplay>();
-            statDisplay.SetStatDisplayStandardStructure(baseStats, true);
+            statDisplay.SetStatDisplayStandardStructure(baseStats, false);
         }
     }
+
 }

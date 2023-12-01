@@ -66,8 +66,10 @@ namespace cs4423fp.InputController
             if( Input.GetMouseButtonUp(0)){
                 foreach(Transform child in Player.PlayerController.Instance.PlayerUnits){
                     foreach (Transform unit in child){
-                        if (isInSelectionBox(unit)){
+                        if(unit != null){
+                            if (isInSelectionBox(unit)){
                             addUnit(unit, true);
+                            }  
                         }
                     }
                 }
@@ -87,14 +89,49 @@ namespace cs4423fp.InputController
                             break;
                         case 7:
                             foreach(Transform unit in selectedUnits){
-                                PlayerUnit pUnit = unit.gameObject.GetComponent<PlayerUnit>();
-                                //pUnit.Attack(hit.point);
+                                if( unit != null){
+                                    PlayerUnit pUnit = unit.gameObject.GetComponent<PlayerUnit>();
+                                    Interactables.IUnit iUnit = hit.transform.GetComponent<Interactables.IUnit>();
+                                    Interactables.IStructure iStructure = hit.transform.GetComponent<Interactables.IStructure>();
+                                    if (iUnit){
+                                        pUnit.AttackSpecificTarget(iUnit.gameObject.transform);
+
+                                    }
+                                    else if (iStructure){
+                                        pUnit.AttackSpecificTarget(iStructure.gameObject.transform);
+                                    }
+                                    else{
+                                        pUnit.AttackSpecificTarget(hit.transform);
+                                    }
+                                }
                             }
+                            break;
+                            case 8:
+                                foreach(Transform unit in selectedUnits){
+                                    if( unit != null){
+                                        PlayerUnit pUnit = unit.gameObject.GetComponent<PlayerUnit>();
+                                        Interactables.IUnit iUnit = hit.transform.GetComponent<Interactables.IUnit>();
+                                        Interactables.IStructure iStructure = hit.transform.GetComponent<Interactables.IStructure>();
+                                        if (iUnit){
+                                            pUnit.AttackSpecificTarget(iUnit.gameObject.transform);
+
+                                        }
+                                        else if (iStructure){
+                                            pUnit.AttackSpecificTarget(iStructure.gameObject.transform);
+                                        }
+                                        else{
+                                            pUnit.AttackSpecificTarget(hit.transform);
+                                        }
+                                    }
+                                }
                             break;
                         default:
                             foreach(Transform unit in selectedUnits){
-                                PlayerUnit pUnit = unit.gameObject.GetComponent<PlayerUnit>();
-                                pUnit.MoveUnit(hit.point);
+                                
+                                if( unit != null){
+                                    PlayerUnit pUnit = unit.gameObject.GetComponent<PlayerUnit>();
+                                    pUnit.MoveUnit(hit.point);
+                                }
                             }
                             break;
                     }
