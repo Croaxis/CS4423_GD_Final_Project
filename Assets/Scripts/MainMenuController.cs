@@ -5,20 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
+    [SerializeField] GameObject settingsMenuOverlayUI;
+    [SerializeField] GameObject loadMenuOverlayUI;
     public void NewGame(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void LoadGame(){
-        Debug.Log("Loading Load Game Menu!");
+        loadMenuOverlayUI.SetActive(true);
     }
 
     public void Settings(){
-        Debug.Log("Loading Settings Menu!");
+        settingsMenuOverlayUI.SetActive(true);
     }
 
     public void QuitGame(){
-        Debug.Log("Quitting Game!");
         Application.Quit();
     }
 }

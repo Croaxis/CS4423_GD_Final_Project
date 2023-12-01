@@ -28,7 +28,7 @@ namespace cs4423fp.Units.Enemy
         private void Start(){
             baseStats = unitType.baseStats;
             statDisplay = GetComponentInChildren<UnitStatDisplay>();
-            statDisplay.SetStatDisplayStandardUnit(baseStats, false);
+            statDisplay.SetStatDisplayStandardUnit(unitType.unitName, baseStats, false);
             agent = GetComponent<NavMeshAgent>();
             Movement.SetAgentProperties(gameObject, false);
             audioSource = GetComponent<AudioSource>();

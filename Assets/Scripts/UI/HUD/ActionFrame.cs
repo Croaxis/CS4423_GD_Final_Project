@@ -111,6 +111,8 @@ namespace cs4423fp.UI.HUD
 
         public void SpawnObject(){
             GameObject spawnObject = Instantiate(spawnOrder[0], new Vector2(spawnPoint.transform.parent.position.x, spawnPoint.transform.parent.position.y), Quaternion.identity);
+            // string poolKey = spawnOrderName[0];
+            // GameObject spawnObject = Optimization.PoolManager.Instance.GetObjectFromPool(poolKey, spawnOrder[0], new Vector2(spawnPoint.transform.parent.position.x, spawnPoint.transform.parent.position.y), Quaternion.identity);
 
             spawnObject.AddComponent<Units.Player.PlayerUnit>();
             spawnObject.GetComponent<Units.Player.PlayerUnit>().unitType = Units.UnitHandler.Instance.GetUnitType(spawnOrderName[0]);

@@ -29,7 +29,7 @@ namespace cs4423fp.Units.Player
         private void Start(){
             baseStats = unitType.baseStats;
             statDisplay = GetComponentInChildren<UnitStatDisplay>();
-            statDisplay.SetStatDisplayStandardUnit(baseStats, true);
+            statDisplay.SetStatDisplayStandardUnit(unitType.unitName, baseStats, true);
             agent = GetComponent<NavMeshAgent>();
             Movement.SetAgentProperties(gameObject, false);
             audioSource = GetComponent<AudioSource>();

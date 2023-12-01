@@ -68,7 +68,7 @@ namespace cs4423fp.InputController
                     foreach (Transform unit in child){
                         if(unit != null){
                             if (isInSelectionBox(unit)){
-                            addUnit(unit, true);
+                                addUnit(unit, true);
                             }  
                         }
                     }
@@ -164,7 +164,7 @@ namespace cs4423fp.InputController
             }
         }
 
-        private bool isInSelectionBox(Transform tf) // Still Broken
+        private bool isInSelectionBox(Transform tf)
         {
             if (!isDragging){
                 return false;

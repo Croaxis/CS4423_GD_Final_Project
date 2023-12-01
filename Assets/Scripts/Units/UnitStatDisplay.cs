@@ -12,24 +12,27 @@ namespace cs4423fp.Units
         [SerializeField] private Image healthBarAmount;
         private bool isPlayerUnit = false;
         private AudioSource audioSource;
+        private string typeName;
 
         private void Start(){
             audioSource = GetComponent<AudioSource>();
         }
         
 
-        public void SetStatDisplayStandardUnit(UnitStatTypes.Base stats, bool isPlayer){
+        public void SetStatDisplayStandardUnit(string unitType, UnitStatTypes.Base stats, bool isPlayer){
             maxHealth = stats.unitHP;
             armor = stats.unitArmor;
             isPlayerUnit = isPlayer;
+            typeName = unitType;
 
             currentHealth = maxHealth;
         }
 
-        public void SetStatDisplayStandardStructure(Structures.StructureStatTypes.Base stats, bool isPlayer){
+        public void SetStatDisplayStandardStructure(string structureType, Structures.StructureStatTypes.Base stats, bool isPlayer){
             maxHealth = stats.structureHP;
             armor = stats.structureArmor;
             isPlayerUnit = isPlayer;
+            typeName = structureType;
 
             currentHealth = maxHealth;
         }
@@ -78,6 +81,7 @@ namespace cs4423fp.Units
 
             Destroy(audioObject, audioSource.clip.length);
             Destroy(gameObject.transform.parent.gameObject);
+            //Optimization.PoolManager.Instance.ReturnObjectToPool(typeName, gameObject.transform.parent.gameObject);
         }
     }
 }

@@ -15,7 +15,7 @@ namespace cs4423fp.Structures.Player
         private void Start(){
             baseStats = structureType.baseStats;
             statDisplay = GetComponentInChildren<Units.UnitStatDisplay>();
-            statDisplay.SetStatDisplayStandardStructure(baseStats, true);
+            statDisplay.SetStatDisplayStandardStructure(structureType.structureName, baseStats, true);
         }
     }
 }

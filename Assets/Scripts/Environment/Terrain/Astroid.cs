@@ -14,7 +14,7 @@ namespace cs4423fp.Environment.Terrian
         private void Start(){
             baseStats = structureType.baseStats;
             statDisplay = GetComponentInChildren<Units.UnitStatDisplay>();
-            statDisplay.SetStatDisplayStandardStructure(baseStats, false);
+            statDisplay.SetStatDisplayStandardStructure(structureType.structureName, baseStats, false);
         }
     }
 
